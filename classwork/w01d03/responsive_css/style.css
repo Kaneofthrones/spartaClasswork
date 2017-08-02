@@ -1,0 +1,39 @@
+
+ div {
+ 	/*border: 2px solid black;*/
+ 	width: 300px;
+ 	height: 300px;
+ 	display: inline-block;
+ }
+
+ .black {
+ 	background-color: black;
+ }
+
+ .yellow {
+ 	background-color: yellow;
+ }
+
+ .red {
+ 	background-color: red;
+ } 
+  @media screen and (min-width: 600px) {
+  	div {
+  		width: 30vw;
+  		height: 100vh;
+  	}
+	}
+
+ 	@media screen and (max-width: 600px) {
+
+ 	div {
+ 		width: 100%;
+ 		display: inline-block;
+ 	}
+ 	.yellow {
+ 		background-color: red;
+ 	}
+ 	.red {
+ 		background-color: yellow;
+ 		}
+	}

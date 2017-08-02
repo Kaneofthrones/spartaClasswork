@@ -89,11 +89,20 @@ body {
 
 footer {
 	text-align: center;
-	margin: 30px;
-	position: absolute;
-  right: 0;
+	margin: 10px;
+	/*position: absolute;*/
+/*  right: 0;
   bottom: 0;
-  left: 0;
+  left: 0;*/
+  /*width: 100%;*/
+}
 
- 
+li {
+	list-style: none;
+	display: inline-block;
+	color: #06365f;
+}
+
+#copyright {
+	color: grey
 }

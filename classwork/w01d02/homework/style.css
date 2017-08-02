@@ -1,0 +1,18 @@
+html {
+	
+}
+
+.headings	{
+	text-align: center;
+	font-size: 60px;
+	font-family: helvetica, sans-serif;
+}
+
+.lists li {
+	display:inline-block;
+
+}
+
+.info {
+	font-family: helvetica, sans-serif;
+}

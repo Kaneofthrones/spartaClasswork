@@ -1,0 +1,99 @@
+/*
+Colors to use:
+dark blue: #06365f
+light blue: #1c5380
+*/
+* {
+	/*border: 2px solid black;*/
+}
+body {
+  font: 200 16px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 0;
+  	background-image: url("../images/bgtile.png");
+	background-repeat: repeat-x;
+}
+
+#container {
+	/*display: inline-block;*/
+}
+
+#text {
+
+	
+	padding-right:  10px;
+	float: right;
+	width: 30%;
+	margin-right: 25%;
+	background-image: url("../images/frame.png");
+	background-repeat: no-repeat;
+	display: inline;
+  
+}
+
+#phone {
+		
+	/*position: absolute;*/
+		margin-left: 18%;
+		margin-top: 8%;
+		float: left;
+}
+
+#banner {
+	/*position: absolute;*/
+	float: right;
+	margin-right: 33%;
+	margin-top: 10%;
+}
+
+#login {
+	/*position: absolute;*/
+	float: right;
+	background-color: #1c5380; 
+  border: none;
+  color: white;
+  padding: 0px 25px;
+  padding-left: 40px;
+  text-align: right;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  border-radius: 4px;
+  margin-right: 25%;
+  margin-top: -5%;
+  
+}
+
+#login img {
+	
+	position: absolute;
+	right: 30%;
+	top: 22%;
+}
+
+#text h2 {
+	color: #06365f;
+	padding: 30px;
+	padding-bottom: 0px;
+}
+
+#text p {
+	padding: 0px 30px;
+
+}
+
+.buttons {
+	display: inline-block;
+	float: right;
+	margin-right: 18%;
+}
+
+footer {
+	text-align: center;
+	margin: 30px;
+	position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+ 
+}

@@ -24,22 +24,45 @@
 	 } else {
 	 	comChoice = 's';
 	 }
-	 //switch for different outputs
-	switch(choice) {
-		case 'r' :
-		break;
-	}
 
-	//if else statements to determine user input
-	if (choice == 'r') {
-		//action
-	}
-	if (choice == 'p') {
-		//action
-	}
-	if (choice == 's') {
-		//action
-	}
-	else {
-		// window.location.reload(true);
-	 }
+	 //make function to compare the userInput to computerInput
+	  var compare = function(userInput, computerInput) {
+	  	//if else statements to determine user input
+			if (userInput === computerInput) {
+			 alert("Tie");
+			}
+			if (userInput === 'r') {
+				//nest the if statement to compare just the event of the user selecting rock
+				if (computerInput === 'p') {
+					alert("paper wins");
+				} else {
+					alert("you win this round");
+				}
+			}
+
+			if (userInput === 'p') {
+				//nest the if statement to compare just the event of the user selecting paper
+				if (computerInput === 's') {
+					alert("Scissors wins");
+				} else {
+					alert("you win this round");
+				}
+			}
+
+			if (userInput === 's') {
+				//nest the if statement to compare just the event of the user selecting Scissors
+				if (computerInput === 'r') {
+					alert("Rock wins");
+				} else {
+					alert("you win this round");
+				}
+			}
+			else {
+			// window.location.reload(true);
+	 		}
+	  }
+	  compare(choice, comChoice);
+
+
+
+	

@@ -77,9 +77,10 @@
 	 		}
 	  }
 	  //call the function and put the function inside a while loop and break the loop after someone gets to 3 wins
-	  for (playerWins = 0; playerWins < 3; playerWins++ ) {
+	  for (playerWins = 0; playerWins < 2; playerWins++ ) {
 	  	compare(choice, comChoice);
 		}
-		alert(playerWins);
+		console.log("Your number of wins: " + playerWins + " number of computer wins: " + comWins);
+
 
 	

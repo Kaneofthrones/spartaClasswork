@@ -25,9 +25,8 @@ if (comChoice < 0.34) {
  } else if (comChoice >= 0.34 && comChoice < 0.68) {
  		comChoice = 'p';
  } else {
- 	comChoice = 's';
+ 		comChoice = 's';
  }
-
 //make function to compare the userInput to computerInput
 var compare = function(userInput, computerInput) {
 	//if else statements to determine user input
@@ -47,7 +46,6 @@ var compare = function(userInput, computerInput) {
 			return compare();
 		}
 	}
-
 	if (userInput === 'p') {
 		//nest the if statement to compare just the event of the user selecting paper
 		if (computerInput === 's') {
@@ -73,7 +71,7 @@ var compare = function(userInput, computerInput) {
 		}
 	}
 	else {
-	 //document.location.reload(false);
+	  //document.location.reload(false);
 		}
   }
 //call the function and put the function inside a while loop and break the loop after someone gets to 3 wins

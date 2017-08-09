@@ -42,13 +42,15 @@ document.addEventListener("DOMContentLoaded", function(){
 		})
 	}
 
-
 //print to console, use program in console first
 
-//
 
-
-	//getElementsByClassName(number)
 } )
 
 // Functions for calculator
+
+	//switch for the different operators
+
+// function to run all funcitons
+
+

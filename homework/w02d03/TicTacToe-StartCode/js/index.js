@@ -1,45 +1,135 @@
 //pseudo code
-
-var player1 = [];
-var player2 = [];
-var winConditions = [[012], [345], [678], [036], [147], [258], [048], [642]];
+//declare global variables
+var boxes = $('td');
+var counter = 0;
+var player1 = "X";
+var player2 = "O";
+//var winConditions = [[012], [345], [678], [036], [147], [258], [048], [642]];
+var playerTurn = $('.playerTurn');
+var playerInput = 1;
+var table = $('table');
+var input = storePlayerInput(playerInput);
+var winning;
 
 //store win coditions in an array of arrays
 //012, 345, 678, 036, 147, 258, 048, 642
 //
-//declare global variables
-var boxes = $('td');
+
 //make functions
 
-boxes.each.addClass('.X');
-
 //display X's
-function displayPlayer1(){
-// 	$(boxes).on('click', function(){
-// 		console.log('button pressed');
+// function displayPlayer1(){
 
-// 	var boxes = $("td");
-//     $(boxes).each(function(index,box){      
-    
-//   })
+// }
+
+// function displayPlayer2() {
+
 // })
-}
+// function onClick(box1){
+//          $(box1).on('click', function(){
+//          	if(counter%2 == 0){
+//              $(box1).html(player1);
+//              $(box1).addClass(player1);
+//             counter += 1;
+//              playerTurn.html("it is O's turn");
+//             //	displayPlayer1();
+//          } else {
+//            counter += 1;
+//            	$(box1).html(player2);
+//             $(box1).addClass(player2);
+//             playerTurn.html("it is X's turn");
+//           //displayPlayer2();
+//          }
+//        })
+//     }
 
-
-//display O's 
-function displayPlayer2(){
-
-}
 //make function to change html to say, whos turn it is
 
 //win condition function
+	//search through array of win conditions and compare a variable of the choices each player has made, after each click 
+//make function to get the state of each td block on screen
+function getState(td){
+	if(td.hasClass('X') || td.hasClass('O')) {
+		return 1;
+	} else {
+		return 0;
+	}
 
-//setup event listeners
+}
+//function to display X or 0 for current player, depending on the input variable
+function storePlayerInput(playerInput) {
+
+	  if(playerInput == 1) {
+    return 'X';
+  } else {
+    return 'O';
+  }
+}
+  //function to change player from X to O
+function changePlayer(playerInput){
+
+	  if(playerInput == 1) {
+    return playerInput = 2;
+  } else {
+    return playerInput = 1;
+  }
+}
+//function to change player input
+function changePlayerInput(td, input) {
+	return td.addClass(input);
+	 //td.html(input);
+}
+//function to display who's turn it is
+function displayTurn (playerTurn, playerInput) {
+	playerTurn.html("it is player " + playerInput + "'s turn");
+}
+//function to reset table 
+function reset(){
+	//add Click event listener
+	$('#reset').click(function() {
+		  table.find('td').each(function() {
+    $(this).removeClass('X').removeClass('O');
+  	});	
+	})
+}
+//make a win condition that compares the vales of the classes that i give to each td, give each td an id to locate the individual blocks so i can find the class on each individual block
+	function winCondition(table, input) {
+		winning = 0
+		if(table.find('#block0').hasClass('X' || 'O') && table.find('#block1').hasClass('X') && table.find('#block2').hasClass('X')) {
+			winning = 1;
+		} else if (table.find('#block3').hasClass('X') && table.find('#block4').hasClass('X') && table.find('#block5').hasClass('X')) {
+			winning = 1;
+		}
+	}
 
 //alernate the input for each click
 
 //run function
 
 function run() {
-	displayPlayer1();
+	//onClick();
+	
+	//console.log(winning);
+	reset();
+	displayTurn(playerTurn, playerInput);
+	storePlayerInput();
+		//make a click function
+		//console.log(table.find('data-num.0'));
+	$('td').click(function(){
+		console.log(winning);
+		td = $(this);
+		var state = getState(td);
+		winCondition(table, input);
+		playerInput = changePlayer(playerInput);
+		if(!state) {
+			
+			changePlayerInput(td, input);
+			//console.log(input);
+		} else {
+
+		}
+	})
+
 }
+
+run();

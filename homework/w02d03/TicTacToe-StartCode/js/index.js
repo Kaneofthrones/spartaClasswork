@@ -4,27 +4,17 @@ var boxes = $('td');
 var counter = 0;
 var player1 = "X";
 var player2 = "O";
-//var winConditions = [[012], [345], [678], [036], [147], [258], [048], [642]];
 var playerTurn = $('.playerTurn');
 var playerInput = 1;
 var table = $('table');
 var input = storePlayerInput(playerInput);
 var winning;
 
-//store win coditions in an array of arrays
+// win coditions 
 //012, 345, 678, 036, 147, 258, 048, 642
 //
 
 //make functions
-
-//display X's
-// function displayPlayer1(){
-
-// }
-
-// function displayPlayer2() {
-
-// })
 // function onClick(box1){
 //          $(box1).on('click', function(){
 //          	if(counter%2 == 0){
@@ -125,10 +115,8 @@ function reset(){
 
 //run function
 
-function run() {
-	//onClick();
-	
-	//console.log(winning);
+function run() {	
+
 	reset();
 		//make a click function
 	$('td').click(function(){
@@ -138,10 +126,12 @@ function run() {
 		winCondition(table, input);
 		playerInput = changePlayer(playerInput);
 		storePlayerInput(playerInput);
-				console.log(winning);
+		changePlayerInput(td, input);
+		console.log(winning);
+
 		if(!state) {
 			
-			changePlayerInput(td, input);
+	
 			//console.log(input);
 		} else {
 

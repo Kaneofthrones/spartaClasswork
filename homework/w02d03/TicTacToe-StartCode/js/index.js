@@ -95,9 +95,28 @@ function reset(){
 //make a win condition that compares the vales of the classes that i give to each td, give each td an id to locate the individual blocks so i can find the class on each individual block
 	function winCondition(table, input) {
 		winning = 0
-		if(table.find('#block0').hasClass('X' || 'O') && table.find('#block1').hasClass('X') && table.find('#block2').hasClass('X')) {
+		if(table.find('#block0').hasClass('X'|| 'O' || 'O') && table.find('#block1').hasClass('X'|| 'O') && table.find('#block2').hasClass('X'|| 'O')) {
 			winning = 1;
-		} else if (table.find('#block3').hasClass('X') && table.find('#block4').hasClass('X') && table.find('#block5').hasClass('X')) {
+
+		} else if (table.find('#block3').hasClass('X'|| 'O') && table.find('#block4').hasClass('X'|| 'O') && table.find('#block5').hasClass('X'|| 'O')) {
+			winning = 1;
+
+		} else if (table.find('#block6').hasClass('X'|| 'O') && table.find('#block7').hasClass('X'|| 'O') && table.find('#block8').hasClass('X'|| 'O')) {
+			winning = 1;
+
+		} else if (table.find('#block0').hasClass('X'|| 'O') && table.find('#block3').hasClass('X'|| 'O') && table.find('#block6').hasClass('X'|| 'O')) {
+			winning = 1;
+
+		} else if (table.find('#block1').hasClass('X'|| 'O') && table.find('#block4').hasClass('X'|| 'O') && table.find('#block7').hasClass('X'|| 'O')) {
+			winning = 1;
+
+		} else if (table.find('#block2').hasClass('X'|| 'O') && table.find('#block5').hasClass('X'|| 'O') && table.find('#block8').hasClass('X'|| 'O')) {
+			winning = 1; 
+
+		} else if (table.find('#block0').hasClass('X'|| 'O') && table.find('#block4').hasClass('X'|| 'O') && table.find('#block8').hasClass('X'|| 'O')) {
+			winning = 1;
+
+		} else if (table.find('#block6').hasClass('X'|| 'O') && table.find('#block4').hasClass('X'|| 'O') && table.find('#block2').hasClass('X'|| 'O')) {
 			winning = 1;
 		}
 	}
@@ -111,16 +130,15 @@ function run() {
 	
 	//console.log(winning);
 	reset();
-	displayTurn(playerTurn, playerInput);
-	storePlayerInput();
 		//make a click function
-		//console.log(table.find('data-num.0'));
 	$('td').click(function(){
-		console.log(winning);
+		displayTurn(playerTurn, playerInput);
 		td = $(this);
 		var state = getState(td);
 		winCondition(table, input);
 		playerInput = changePlayer(playerInput);
+		storePlayerInput(playerInput);
+				console.log(winning);
 		if(!state) {
 			
 			changePlayerInput(td, input);

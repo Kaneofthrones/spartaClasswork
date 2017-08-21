@@ -1,7 +1,11 @@
-alphabet = "abcdefgh"
+$i = 0
+$num = 5
+numbers = [1,2,3,4]
 
-puts alphabet.methods
-
+while $i < $num do
+   puts numbers
+   $i += 1
+end
 
 
 

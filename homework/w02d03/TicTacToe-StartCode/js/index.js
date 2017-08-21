@@ -2,8 +2,6 @@
 //declare global variables
 var boxes = $('td');
 var counter = 0;
-var player1 = "X";
-var player2 = "O";
 var playerTurn = $('.playerTurn');
 var playerInput = 1;
 var table = $('table');
@@ -40,6 +38,7 @@ var winning;
 //make function to get the state of each td block on screen
 function getState(td){
 	if(td.hasClass('X') || td.hasClass('O')) {
+		//$('td').html()
 		return 1;
 	} else {
 		return 0;
@@ -50,9 +49,9 @@ function getState(td){
 function storePlayerInput(playerInput) {
 
 	  if(playerInput == 1) {
-    return 'X';
+    	return 'X';
   } else {
-    return 'O';
+    	return 'O';
   }
 }
   //function to change player from X to O
@@ -85,7 +84,7 @@ function reset(){
 //make a win condition that compares the vales of the classes that i give to each td, give each td an id to locate the individual blocks so i can find the class on each individual block
 	function winCondition(table, input) {
 		winning = 0
-		if(table.find('#block0').hasClass('X'|| 'O' || 'O') && table.find('#block1').hasClass('X'|| 'O') && table.find('#block2').hasClass('X'|| 'O')) {
+		if(table.find('#block0').hasClass('X'|| 'O' ) && table.find('#block1').hasClass('X'|| 'O') && table.find('#block2').hasClass('X'|| 'O')) {
 			winning = 1;
 
 		} else if (table.find('#block3').hasClass('X'|| 'O') && table.find('#block4').hasClass('X'|| 'O') && table.find('#block5').hasClass('X'|| 'O')) {

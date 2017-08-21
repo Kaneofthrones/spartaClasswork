@@ -1,3 +1,34 @@
+alphabet = "abcdefgh"
+
+puts alphabet.methods
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # #String
 # my_name = "Richard"
 
@@ -19,16 +50,16 @@
 # puts array_name.shift
 # puts array_name
 
-person = {
-	:name => "Richard", 
-	:age => 45, 
-}
+# person = {
+# 	:name => "Richard", 
+# 	:age => 45, 
+# }
 
-person2 = {
-	name: "Stevo",
-	age: 22
-}
+# person2 = {
+# 	name: "Stevo",
+# 	age: 22
+# }
 
-puts person2[:name]
+# puts person2[:name]
 
-puts person[:name]
+# puts person[:name]

@@ -1,12 +1,13 @@
 require 'sinatra'
 require "sinatra/reloader" if development?
 
+#root directory
 get "/" do 
 
 	"Index"
 
 end
-
+#videos is the /:id
 get "/videos/new" do
 
 	"New"

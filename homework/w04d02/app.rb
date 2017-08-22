@@ -25,3 +25,9 @@ get "/videos/1/edit" do
 
 end
 
+put "/videos/1" do 
+
+	"Update"
+
+end
+

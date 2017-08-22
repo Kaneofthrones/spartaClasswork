@@ -1,7 +1,7 @@
 require 'sinatra'
 require "sinatra/reloader" if development?
 
-get "/videos" do 
+get "/" do 
 
 	"Index"
 
@@ -19,21 +19,29 @@ post "/videos" do
 
 end
 
-get "/videos/1/edit" do 
+get "/videos/edit" do 
 
 	"Edit"
 
 end
 
-put "/videos/1" do 
+put "/videos" do 
 
 	"Update"
 
 end
 
-delete "/videos/1" do 
+delete "/videos" do 
 
 	"Delete"
 
 end
+
+get "/videos" do 
+
+	"Show"
+
+end
+
+
 

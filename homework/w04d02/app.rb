@@ -13,7 +13,7 @@ get "/videos/new" do
 
 end
 
-post "/videos" do
+post "/" do
 
 	"Create"
 

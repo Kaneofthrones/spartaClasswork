@@ -31,3 +31,9 @@ put "/videos/1" do
 
 end
 
+delete "/videos/1" do 
+
+	"Delete"
+
+end
+

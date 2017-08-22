@@ -7,3 +7,9 @@ get "/videos" do
 
 end
 
+get "/videos/new" do
+
+	"New"
+
+end
+

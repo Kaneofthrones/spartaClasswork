@@ -19,3 +19,9 @@ post "/videos" do
 
 end
 
+get "/videos/1/edit" do 
+
+	"Edit"
+
+end
+

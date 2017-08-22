@@ -13,3 +13,9 @@ get "/videos/new" do
 
 end
 
+post "/videos" do
+
+	"Create"
+
+end
+

@@ -1,4 +1,4 @@
-class PostsController < Sinatra::Base 
+class CarsController < Sinatra::Base 
 
 	$cars = [{
 		id: 0,

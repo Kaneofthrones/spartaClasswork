@@ -27,8 +27,6 @@ class CarsController < Sinatra::Base
 
 	get '/' do
 
-    "Hello World2"
-
     @title = "cars"
 
     @cars = $cars
@@ -50,6 +48,22 @@ class CarsController < Sinatra::Base
 	get '/new' do
 
 		erb :'cars/new_car'
+
+	end
+
+	post '/' do 
+
+		id =  $cars.length 
+
+		new_car = {
+			id: id,
+			make: params[:make],
+			model: params[:model]
+		}
+
+		$cars.push(new_car)
+
+		redirect "/"
 
 	end
 

@@ -31,18 +31,25 @@ class CarsController < Sinatra::Base
 
     @title = "cars"
 
-    # @cars = $cars
+    @cars = $cars
+
+    erb :'cars/index'
 
   end
 
-  	get '/:id' do
+  get '/:id' do
 
 		id = params[:id]
 
 		@car = $cars[id.to_i]
 		
 		erb :'cars/show'
-	
+
+	end
+
+	get '/new' do
+
+		erb :'cars/new_car'
 
 	end
 

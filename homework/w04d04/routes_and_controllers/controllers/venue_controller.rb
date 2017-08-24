@@ -1,4 +1,4 @@
-class PostsController < Sinatra::Base
+class VenueController < Sinatra::Base
 
 	$venues = [{
 		id: 0,
@@ -69,6 +69,7 @@ class PostsController < Sinatra::Base
 
 	end 
 
+end
 
 
 
@@ -77,5 +78,3 @@ class PostsController < Sinatra::Base
 
 
 
-
-}

@@ -1,6 +1,6 @@
 <!-- form for user to enter car -->
 
-<form action="/<%= car[:id] %>" method="POST">
+<form action="/<%= @car[:id] %>" method="POST">
 	<div>
 		<label>Make</label>
 		<input type="text" name="title" placeholder="enter a Title">
@@ -10,6 +10,6 @@
 		<textarea name="content" placeholder="The Content goes here"></textarea>
 	</div>
 	<div>
-		<input type="submit" value="Save Post">
+		<input type="submit" value="Save Car">
 	</div>
 </form>

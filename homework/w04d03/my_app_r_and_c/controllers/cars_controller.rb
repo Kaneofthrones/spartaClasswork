@@ -35,6 +35,12 @@ class CarsController < Sinatra::Base
 
   end
 
+  get '/new' do
+
+		erb :'cars/new_car'
+
+	end
+
   get '/:id' do
 
 		id = params[:id]
@@ -42,12 +48,6 @@ class CarsController < Sinatra::Base
 		@car = $cars[id.to_i]
 		
 		erb :'cars/show'
-
-	end
-
-	get '/new' do
-
-		erb :'cars/new_car'
 
 	end
 
@@ -66,5 +66,24 @@ class CarsController < Sinatra::Base
 		redirect "/"
 
 	end
+
+		get '/:id/edit' do
+
+		"EDIT: #{params[:id]}"
+
+		id = params[:id]
+
+		@car = $cars[id.to_i]
+
+		erb :'cars/edit'
+
+	end
+
+	put '/:id' do
+
+		"UPDATE: #{params[:id]}"
+
+	end
+
 
 end

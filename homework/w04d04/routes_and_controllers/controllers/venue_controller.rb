@@ -34,14 +34,17 @@ class VenueController < Sinatra::Base
 
 		erb :'venues/index'
 
-		
-
 	end
-
 
 	get '/new' do 
 
-		"new"
+		@venue = {
+			id: "",
+			name: "",
+			content: ""
+		}
+
+		erb :'posts/new_venue'
 
 	end
 

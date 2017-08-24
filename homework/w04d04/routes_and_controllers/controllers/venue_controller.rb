@@ -50,7 +50,11 @@ class VenueController < Sinatra::Base
 
 	get '/:id' do 
 
-		"show"
+		id = params[:id]
+
+		@venue = $venues[id.to_i]
+
+		erb :'venues/show'
 
 	end
 

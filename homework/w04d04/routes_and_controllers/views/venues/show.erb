@@ -1,0 +1,11 @@
+
+	<h1><%= @venue[:name] %></h1>
+
+	<p><%= @venue[:content] %></p>
+
+	<a href="/<%= @venue[:id] %>/edit"> click to edit</a>
+
+	<form action="/<%= @venue[:id] %>" method="POST">
+		<input type="hidden" name="_method" value="DELETE">
+		<input type="submit" value="Delete">
+	</form>

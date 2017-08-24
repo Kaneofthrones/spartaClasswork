@@ -1,0 +1,6 @@
+	<% @cars.each do |car| %>
+		<div>
+		 	<h3><a href="/<%= car[:id] %>"><%= car[:make] %> </a></h3>
+		 	<p><%= car[:model] %></p>
+		</div>
+	<% end %>

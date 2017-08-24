@@ -2,8 +2,18 @@ class CarsController < Sinatra::Base
 
 	$cars = [{
 		id: 0,
-		make: " ",
-		model: ""
+		make: "Acura",
+		model: "MDX",
+		},
+	{
+		id: 1,
+		make: "Chevrolet",
+		model: "impala",
+		},
+	{
+		id: 2,
+		make: "Ferrari",
+		model: "250 GTO"
 	}]
 
 	#set root as the parent directory of the current file
@@ -16,7 +26,14 @@ class CarsController < Sinatra::Base
 	end
 
 	get '/' do
-    "Hello World"
+
+    "Hello World2"
+
+    @title = "cars"
+
+    # @cars = $cars
+
+
   end
 
 end

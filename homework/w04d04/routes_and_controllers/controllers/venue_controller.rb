@@ -28,7 +28,13 @@ class VenueController < Sinatra::Base
 
 	get '/' do 
 
-		"index"
+		@title = "Venue_Review"
+
+		@venues = $venues
+
+		erb :'venues/index'
+
+		
 
 	end
 

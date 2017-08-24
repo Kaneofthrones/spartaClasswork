@@ -33,7 +33,17 @@ class CarsController < Sinatra::Base
 
     # @cars = $cars
 
-
   end
+
+  	get '/:id' do
+
+		id = params[:id]
+
+		@car = $cars[id.to_i]
+		
+		erb :'cars/show'
+	
+
+	end
 
 end

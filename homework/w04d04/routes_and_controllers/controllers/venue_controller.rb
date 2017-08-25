@@ -84,7 +84,14 @@ class VenueController < Sinatra::Base
 
 	delete '/:id' do 
 
-		"delete"
+		#get the id
+		id = params[:id].to_i
+
+		#delete the post from the array
+		$venues.delete_at(id)
+
+		#redirect back to the homepage
+		redirect "/"
 
 	end
 

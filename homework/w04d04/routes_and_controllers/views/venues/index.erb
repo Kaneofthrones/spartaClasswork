@@ -1,6 +1,7 @@
 <% @venues.each do |venue| %>
-	<div>
-	 	<h3><a href="/<%= venue[:id] %>"><%= venue[:name] %> </a></h3>
-	 	<p><%= venue[:content] %></p>
+	<div class="row content" >
+		<div class="col-sm-4" >
+		 	<h3><a href="/<%= venue[:id] %>"><%= venue[:name] %> </a></h3>
+		 	<p><%= venue[:content] %></p>
 	</div>
 <% end %>

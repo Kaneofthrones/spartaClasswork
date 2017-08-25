@@ -59,14 +59,26 @@ class VenueController < Sinatra::Base
 	end
 
 	post '/' do 
-
-		"create"
+		#id equal to the length of the hash
+		id = $venues.length
 
 	end 
 
 	put '/:id' do 
 
-		"update"
+		id = params[:id].to_i
+
+		venue = $venues[id]
+
+		# update the values of the object with data from the request
+  	venue[:name] = params[:name];
+  	venue[:content] = params[:content];
+    
+  	# save the post back to our data store ( at the spot it came from this time )
+  	$venues[id] = venue;
+    
+  	# redirect the user to a GET route. We'll go back to the INDEX.
+	  redirect "/"
 
 	end
 

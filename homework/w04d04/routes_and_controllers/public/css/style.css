@@ -9,3 +9,11 @@ body {
 	margin-bottom: 2px;
 
 }
+
+.commentBox {
+	margin: 5rem;
+}
+
+#venueName {
+	margin-bottom: 0px;
+}

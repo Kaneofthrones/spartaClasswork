@@ -1,0 +1,16 @@
+<form action="/<%= @venue[:id] %>" method="POST">
+	<div>
+	<% if(@venue[:id != ""]) %>
+		<input type="hidden" name="_method" value="PUT">
+	<% end %>
+		<label>Title</label>
+		<input type="text" name="name" placeholder="enter a Title" value="<%= @venue[:name] %>">
+	</div>
+	<div>
+		<label>Content</label>
+		<textarea name="content" placeholder="The Content goes here"><%= @venue[:content] %></textarea>
+	</div>
+	<div>
+		<input type="submit" value="Save Post">
+	</div>
+</form>

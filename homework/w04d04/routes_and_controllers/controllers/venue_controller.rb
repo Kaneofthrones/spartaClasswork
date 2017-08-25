@@ -44,7 +44,7 @@ class VenueController < Sinatra::Base
 			content: ""
 		}
 
-		erb :'posts/new_venue'
+		erb :'venues/new_venue'
 
 	end
 
@@ -61,6 +61,16 @@ class VenueController < Sinatra::Base
 	post '/' do 
 		#id equal to the length of the hash
 		id = $venues.length
+
+		new_venue = {
+			id: id,
+			name: params[:name],
+			content: params[:content]
+		}
+
+		$venues.push(new_venue)
+
+		redirect "/"
 
 	end 
 
@@ -97,7 +107,11 @@ class VenueController < Sinatra::Base
 
 	get '/:id/edit' do 
 
-		"edit"
+		id = params[:id]
+
+		@venue = $venues[id.to_i]
+
+		erb :'venues/edit'
 
 	end 
 

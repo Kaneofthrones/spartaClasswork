@@ -9,3 +9,15 @@ class ReviewController < Sinatra::Base
   configure :development do
       register Sinatra::Reloader
   end
+
+  get '/' do
+
+  	@title = "Dance Review"
+
+    @reviews = Review.all
+  
+    erb :'reviews/index'
+  
+  end
+
+end

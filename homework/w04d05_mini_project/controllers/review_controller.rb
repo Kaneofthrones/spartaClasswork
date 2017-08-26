@@ -20,4 +20,15 @@ class ReviewController < Sinatra::Base
   
   end
 
+  get '/new' do
+
+  	@review = Review.new
+    @review.id = ""
+    @review.title = ""
+    @review.body = ""
+
+    erb :"reviews/new"
+
+  end
+
 end

@@ -27,4 +27,13 @@ class Review
 		reviews
 	end
 
+	def self.find id
+		conn = self.open_connection
+		sql = "SELECT id, title, body FROM review WHERE id = #{id} LIMIT 1"
+		reviews = conn.exec(sql)
+		review = self.hydrate reviews[0]
+
+		post
+	end
+
 end

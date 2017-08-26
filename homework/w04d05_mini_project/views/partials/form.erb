@@ -1,0 +1,20 @@
+<form action="/<%= @review.id %>" method="POST">
+    <% if(@review.id != "") %>
+        <input type="hidden" name="_method" value="PUT">
+    <% end %>
+    <div>
+        <label>Title</label>
+        <input type="text" name="title" placeholder="Enter a Title" value="<%= @review.title %>">
+    </div>
+    <div>
+        <label>Content</label>
+        <textarea name="body" placeholder="The Content"><%= @review.body %></textarea>
+    </div>
+    <div>
+        <input type="submit" value="Save review">
+    </div>
+    <form action="/<%= @review.id %>" method="POST">
+        <input type="hidden" name="_method" value="DELETE">
+        <input type="submit" value="Delete">
+    </form> 
+</form>

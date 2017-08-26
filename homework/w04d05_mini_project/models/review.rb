@@ -36,4 +36,22 @@ class Review
 		review
 	end
 
+		def save
+		conn = Review.open_connection
+
+		if(!self.id)
+		sql = "INSERT INTO review (title, body) VALUES ('#{self.title}', '#{self.body}')"
+		else
+			sql = "UPDATE review SET title='#{self.title}', body='#{self.body}' WHERE id=#{self.id}"
+		end
+		conn.exec(sql)
+	end
+
+	def self.destroy id
+		conn = self.open_connection
+		sql = "DELETE FROM review WHERE id='#{id}'  "
+		reviews = conn.exec(sql)
+	end
+
+
 end

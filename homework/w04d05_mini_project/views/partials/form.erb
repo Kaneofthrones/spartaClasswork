@@ -11,10 +11,11 @@
         <textarea name="body" placeholder="The Content"><%= @review.body %></textarea>
     </div>
     <div>
-        <input type="submit" value="Save review">
+        <input type="submit" value="Save Review">
     </div>
-    <form action="/<%= @review.id %>" method="POST">
-        <input type="hidden" name="_method" value="DELETE">
-        <input type="submit" value="Delete">
-    </form> 
 </form>
+
+<form action="/<%= @review.id %>" method="POST">
+    <input type="hidden" name="_method" value="DELETE">
+    <input type="submit" value="Delete">
+</form> 

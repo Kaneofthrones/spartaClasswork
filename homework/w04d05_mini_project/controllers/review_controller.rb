@@ -31,7 +31,7 @@ class ReviewController < Sinatra::Base
 
   end
 
-    get '/:id' do
+  get '/:id' do
     
     # get the ID and turn it in to an integer
     id = params[:id].to_i
@@ -43,4 +43,52 @@ class ReviewController < Sinatra::Base
     
   end
 
+  post '/' do
+    
+    review = Review.new
+    review.title = params[:title]
+    review.body = params[:body]
+    review.save
+
+    redirect "/" 
+
+  end
+
+   put '/:id'  do
+    
+    id = params[:id].to_i
+    review = Review.find id
+
+    review.title = params[:title]
+    review.body = params[:body]
+
+    review.save
+
+    redirect "/"
+    
+  end
+
+   delete '/:id'  do
+    
+    id = params[:id].to_i
+
+    Review.destroy id
+
+    redirect "/"
+    
+  end
+
+    get '/:id/edit'  do
+    
+    # get the ID and turn it in to an integer
+    id = params[:id].to_i
+
+    # make a single post object available in the template
+    @review = Review.find id
+    
+    erb :'reviews/edit'
+    
+  end
+
 end
+

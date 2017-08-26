@@ -31,4 +31,16 @@ class ReviewController < Sinatra::Base
 
   end
 
+    get '/:id' do
+    
+    # get the ID and turn it in to an integer
+    id = params[:id].to_i
+
+    # make a single review object available in the template
+    @review = Review.find id
+    
+    erb :'reviews/show'
+    
+  end
+
 end

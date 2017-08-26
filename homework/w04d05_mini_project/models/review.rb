@@ -33,7 +33,7 @@ class Review
 		reviews = conn.exec(sql)
 		review = self.hydrate reviews[0]
 
-		post
+		review
 	end
 
 end

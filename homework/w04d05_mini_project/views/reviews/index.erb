@@ -2,8 +2,11 @@
 <h1>Welcome to Dance Review</h1>
 
 <% @reviews.each do |review| %>
-<div>
-  <h3><a href="/<%= review.id%>"><%= review.title %></a></h3>
-  <p><%= review.body %></p>
+<div class="row rowStyle">
+	<div class="col-md-6">
+	  <h3><a href="/<%= review.id%>"><%= review.title %></a></h3>
+	  <p><%= review.body %></p>
+	</div>
 </div>
+
 <% end %>

@@ -1,3 +1,14 @@
-<h1><%= @review.title %></h1>
+<div class="jumbotron" id="banner">
+	<%= erb(:'partials/nav', :layout => false) %>
+	<h1 class="bannerText"><%= @review.title %></h1>
+</div>
+
+<div class="container-fluid" id="reviewDisplay">
+	<p class="text-left"><%= @review.body %></p>
+	<a href="/<%= @review.id %>/edit">Click here to edit Review</a>
+</div>
+
+
+<!-- <h1><%= @review.title %></h1>
 <p><%= @review.body %></p>
-<a href="/<%= @review.id %>/edit">edit</a>
+<a href="/<%= @review.id %>/edit">Click here to edit Review</a> -->

@@ -1,12 +1,15 @@
 <!-- display the homepage -->
-<h1>Dance Review</h1>
-<p>All you need to know about the London dance scene</p>
+<div class="jumbotron" id="banner">
+	<h1 class="bannerText">Dance Review</h1>
+	<p class="bannerText">All you need to know about the London dance scene</p>
+</div>
 
 <div class="row rowStyle">
 	<% @reviews.each do |review| %>
-		<div class="col-md-6">
+		<div class="col-md-6 reviewBlocks">
 		  <h3><a href="/<%= review.id%>"><%= review.title %></a></h3>
-		  <p><%= review.body %></p>
+		  <p class="text-left"><%= review.body %></p>
 		</div>
 	<% end %>
 </div>
+

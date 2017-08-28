@@ -26,7 +26,7 @@ class ReviewController < Sinatra::Base
     @review.id = ""
     @review.title = ""
     @review.body = ""
-    @review.img = ""
+    # @review.img = ""
 
     erb :"reviews/new"
 
@@ -49,7 +49,7 @@ class ReviewController < Sinatra::Base
     review = Review.new
     review.title = params[:title]
     review.body = params[:body]
-    review.img = params[:img]
+    # review.img = params[:img]
     review.save
 
     redirect "/" 
@@ -63,7 +63,7 @@ class ReviewController < Sinatra::Base
 
     review.title = params[:title]
     review.body = params[:body]
-    review.img = params[:img]
+    # review.img = params[:img]
     review.save
 
     redirect "/"

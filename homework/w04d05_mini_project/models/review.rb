@@ -18,7 +18,7 @@ class Review
 
 	def self.all
 		conn = self.open_connection
-		sql = "SELECT id, title, body FROM review ORDER BY id"
+		sql = "SELECT id, title, body, img FROM review ORDER BY id"
 		results = conn.exec(sql)
 
 		reviews = results.map do |result|
@@ -29,7 +29,7 @@ class Review
 
 	def self.find id
 		conn = self.open_connection
-		sql = "SELECT id, title, body FROM review WHERE id = #{id} LIMIT 1"
+		sql = "SELECT id, title, body, img FROM review WHERE id = #{id} LIMIT 1"
 		reviews = conn.exec(sql)
 		review = self.hydrate reviews[0]
 
@@ -40,9 +40,9 @@ class Review
 		conn = Review.open_connection
 
 		if(!self.id)
-		sql = "INSERT INTO review (title, body) VALUES ('#{self.title}', '#{self.body}')"
+		sql = "INSERT INTO review (title, body, img) VALUES ('#{self.title}', '#{self.body}', #{self.img})"
 		else
-			sql = "UPDATE review SET title='#{self.title}', body='#{self.body}' WHERE id=#{self.id}"
+			sql = "UPDATE review SET title='#{self.title}', body='#{self.body}', img='#{self.img}' WHERE id=#{self.id}"
 		end
 		conn.exec(sql)
 	end

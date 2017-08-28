@@ -12,9 +12,13 @@
 <div class="row rowStyle">
 	<% @reviews.each do |review| %>
 		<div class="col-md-6 reviewBlocks">
-		  <h3><a href="/<%= review.id%> "><%= review.title %></a></h3>
-		  <p class="text-left"> <%= review.body %> </p>
-		</div>
+			<a href="/<%= review.id%> ">
+				<div class="container boxLink">
+			  	<h3><%= review.title %></h3>
+			  	<p class="text-left"> <%= review.body %> </p>
+				</div>
+			</a>
+		</div>		
 	<% end %>
 </div>
 

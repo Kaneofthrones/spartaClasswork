@@ -49,6 +49,11 @@
   color: white;
 }
 
+.boxLink {
+	width: 100%;
+	height: 100%;
+}
+
 #reviewDisplay {
 	background-color: #4C4C4C;
 	color: white;

@@ -1,6 +1,6 @@
 class Review
 
-	attr_accessor :id, :title, :body
+	attr_accessor :id, :title, :body, :img
 
 	def self.open_connection
 		PG.connect(dbname: "review")
@@ -12,14 +12,14 @@ class Review
 		review.id = data['id']
 		review.title = data['title']
 		review.body = data['body']
-		# review.body = data['img']
+		review.img = data['img']
 
 		review
 	end
 
 	def self.all
 		conn = self.open_connection
-		sql = "SELECT id, title, body FROM review ORDER BY id"
+		sql = "SELECT id, title, body, img FROM review ORDER BY id"
 		results = conn.exec(sql)
 
 		reviews = results.map do |result|

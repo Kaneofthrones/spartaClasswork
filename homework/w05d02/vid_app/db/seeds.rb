@@ -10,4 +10,4 @@ Video.create([
 	{title: 'Video1', url: 'IgECPk4WeIc', description: 'Video 1 description'},
 	{title: 'Video2', url: 'QR_74m5GeLo', description: 'Video 2 description'},
 	{title: 'Video3', url: 'IDC6VU7oMbc', description: 'Video 3 description'}
-	])
+])

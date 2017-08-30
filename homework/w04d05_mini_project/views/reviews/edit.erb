@@ -1,0 +1,9 @@
+<link rel="stylesheet" type="text/css" href="../css/style.css">
+<div class="jumbotron" id="bannerEdit">
+	<%= erb(:'partials/nav', :layout => false) %>
+	<h1 class="bannerText"><%= @review.title %></h1>
+</div>
+
+<h1>Edit Post</h1>
+<%= erb(:'partials/form') %>
+

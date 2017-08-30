@@ -1,0 +1,37 @@
+<!-- <form action="/<%= @venue[:id] %>" method="POST">
+	<div>
+	<% if(@venue[:id != ""]) %>
+		<input type="hidden" name="_method" value="PUT">
+	<% end %>
+		<label>Title</label>
+		<input type="text" name="name" placeholder="enter a Title" value="<%= @venue[:name] %>">
+	</div>
+	<div>
+		<label>Content</label>
+		<textarea name="content" placeholder="The Content goes here"><%= @venue[:content] %></textarea>
+	</div>
+	<div>
+		<input type="submit" value="Save Post">
+	</div>
+</form> -->
+
+<form action="/<%= @venue[:id] %>" method="POST">
+  <div class="form-group">
+  	<div class="row">
+  		<% if(@venue[:id != ""]) %>
+  			<input type="hidden" name="_method" value="PUT">
+			<% end %>
+   	 <label class="control-label col-sm-12 commentBox" id="venueName" for="name">Venue name:</label>
+   	 <div class="col-sm-4 commentBox" id="nameHolder">
+      <input type="text" class="form-control" id="name" placeholder="Enter a venue name" value="<%= @venue[:name] %>">
+    	</div>
+    </div>
+  </div>
+  <div class="row">
+  <div class="form-group col-sm-4 commentBox" id="commentBox">
+  	<label for="comment" >Comment:</label>
+  	<textarea class="form-control" rows="4" id="comment"><%= @venue[:content] %></textarea>
+	</div>
+	</div>
+  <button type="submit" class="btn btn-primary commentBox" id="submitButton" value="Save Post">Submit</button>
+</form>

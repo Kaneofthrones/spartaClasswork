@@ -1,0 +1,23 @@
+body {
+	background-image: url("../assets/bg_white.jpg");
+}
+
+#banner {
+	text-align: center;
+	background: none;
+	border-bottom: 2px solid grey;
+	margin-bottom: 2px;
+
+}
+
+.commentBox {
+	margin: 5rem;
+}
+
+#venueName {
+	margin-bottom: 0px;
+}
+
+.content {
+	margin-left: 3rem;
+}

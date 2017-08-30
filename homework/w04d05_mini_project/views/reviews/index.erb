@@ -1,0 +1,25 @@
+<!-- display the homepage -->
+<div class="jumbotron" id="banner">
+	<div class="homeBlock">
+    <a href="/new"> 
+    	<img src="/assets/new-tab.svg" width="60" height="60" alt="New"> 
+    </a>
+ 	</div>
+	<h1 class="bannerText">Dance Review</h1>
+	<p class="bannerText">All you need to know about the London dance scene</p>
+</div>
+
+<div class="row rowStyle">
+	<% @reviews.each do |review| %>
+		<div class="col-md-6 reviewBlocks">
+			<a href="/<%= review.id%> ">
+				<div class="container boxLink">
+			  	<h3><%= review.title %></h3>
+			  	<p class="text-left"> <%= review.body %> </p>
+			  	<img src="./assets/<%=review.img%>">
+				</div>
+			</a>
+		</div>		
+	<% end %>
+</div>
+

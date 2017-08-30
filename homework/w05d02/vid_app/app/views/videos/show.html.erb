@@ -7,12 +7,12 @@
 
 <p>
   <strong>Url:</strong>
-  <%= @video.url %>
+<iframe width="420" height="315" src="https://www.youtube.com/embed/<%= @video.url %>" frameborder="0" allowfullscreen></iframe>
 </p>
 
 <p>
   <strong>Description:</strong>
-  <%= video_tag @video.description %>
+  <%=  @video.description %>
 </p>
 
 <%= link_to 'Edit', edit_video_path(@video) %> |

@@ -1,0 +1,24 @@
+<nav class="navbar navbar-light bg-faded">
+  <span class="navbar-text">
+    <% if user_signed_in? %> Hello  <%= current_user.name %>,
+    you are logged in as: <%= current_user.email %>
+    <% end %>
+  </span>
+  <form class="form-inline">
+
+    <% if user_signed_in? %>
+
+    <button class="btn align-middle btn-outline-success" type="button" ><%= link_to 'Edit profile', edit_user_registration_path %></button>
+
+    <button class="btn btn-sm align-middle btn-outline-secondary" type="button"><%= link_to 'Logout', destroy_user_session_path, method: :delete %></button>
+
+    <% else %>
+
+    <button class="btn btn-outline-success" type="button" ><%= link_to 'Login', new_user_session_path %></button>
+
+    <button class="btn btn-sm align-middle btn-outline-secondary" type="button"><%= link_to 'Sign Up', new_user_registration_path %></button>
+
+   <% end %>
+</form>
+
+</nav>

@@ -1,0 +1,17 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @book.name %>
+</p>
+
+<p>
+  <strong>Author:</strong>
+ <a href="http://localhost:3000/authors/<%= @author.name %>"> <%= @author.name %> </a>
+</p>
+
+
+
+<%= link_to 'New Book', new_book_path %>
+<%= link_to 'Edit', edit_book_path(@book) %> |
+<%= link_to 'Back', books_path %>

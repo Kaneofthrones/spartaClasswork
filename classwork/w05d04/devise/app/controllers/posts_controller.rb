@@ -3,6 +3,8 @@ class PostsController < ApplicationController
   before_action :authenticate_user!
   # GET /posts
   # GET /posts.json
+
+
   def index
     @posts = Post.all
 
@@ -11,6 +13,7 @@ class PostsController < ApplicationController
   # GET /posts/1
   # GET /posts/1.json
   def show
+    # redirect_to posts_path if !check_my_stuff?
   end
 
   # GET /posts/new
@@ -73,4 +76,10 @@ class PostsController < ApplicationController
     def post_params
       params.require(:post).permit(:title, :body, :user_id)
     end
+
+    # def check_my_stuff?
+    #   @post = Post.find(current_user.id)
+    #   (@post.user_id == current_user) ? true : false
+    # end
+
 end

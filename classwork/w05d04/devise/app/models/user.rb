@@ -6,4 +6,6 @@ class User < ApplicationRecord
 
 
 	has_many :posts, dependent: :destroy
+
+	validates :name, inclusion: { in: %w(Tychus Mobius Jimmy), message: "=> : %{value} is incorrect, please enter the right name" }
 end

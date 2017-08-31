@@ -1,6 +1,6 @@
 <h1>This is the Users index</h1>
 
 <% @users.each do |user|%>
-	<p><%= user.email %></p>
-	
+	<p><%= user.name %></p>
+  <p><%= current_user.posts %> </p>
 <% end %>
